@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Monthly total</string>
+    <string name="widget_description">See this month\'s spending and open the add-expense form in one tap.</string>
+    <string name="widget_label">This month</string>
+    <string name="widget_add">+ Add</string>
+
+    <string name="quick_add_name">Quick add expense</string>
+    <string name="quick_add_description">Type an amount, pick a category and add an expense without opening the app.</string>
+    <string name="quick_add_button">Add expense</string>
+
+    <!-- Accent matches the app's seed color in lib/theme.dart. -->
+    <color name="widget_surface">#FFFFFF</color>
+    <color name="widget_text">#1B1B1F</color>
+    <color name="widget_muted">#6F6D68</color>
+    <color name="widget_accent">#2A78D6</color>
+    <color name="widget_on_accent">#FFFFFF</color>
+    <color name="widget_key">#EFEEE9</color>
+
+    <style name="WidgetKeyRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="WidgetKey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@drawable/widget_key</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/widget_text</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+</resources>

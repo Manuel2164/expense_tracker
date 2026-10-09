@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import '../data/home_widget.dart';
 import 'dashboard_screen.dart';
 import 'expense_form.dart';
 import 'expenses_screen.dart';
@@ -21,6 +24,28 @@ class _HomeShellState extends State<HomeShell> {
   ];
 
   int _index = 0;
+  StreamSubscription<Uri?>? _quickAdd;
+  bool _formOpen = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _quickAdd = listenForQuickAdd(_addExpense);
+  }
+
+  @override
+  void dispose() {
+    _quickAdd?.cancel();
+    super.dispose();
+  }
+
+  Future<void> _addExpense() async {
+    // The home-screen widget can ask again while the form is already showing.
+    if (_formOpen || !mounted) return;
+    _formOpen = true;
+    await openExpenseForm(context);
+    _formOpen = false;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +94,7 @@ class _HomeShellState extends State<HomeShell> {
       floatingActionButton: _index == 2
           ? null
           : FloatingActionButton.extended(
-              onPressed: () => openExpenseForm(context),
+              onPressed: _addExpense,
               icon: const Icon(Icons.add),
               label: const Text('Add expense'),
             ),

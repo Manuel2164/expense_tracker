@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/quick_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="0"
+        android:textColor="@color/widget_text"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quick_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        android:text="Food &amp; Dining"
+        android:textColor="@color/widget_muted"
+        android:textSize="12sp" />
+
+    <!-- Categories, in the same order as ExpenseCategory. -->
+    <LinearLayout style="@style/WidgetKeyRow">
+        <TextView android:id="@+id/quick_cat_food" style="@style/WidgetKey" android:text="🍔" />
+        <TextView android:id="@+id/quick_cat_transport" style="@style/WidgetKey" android:text="🚌" />
+        <TextView android:id="@+id/quick_cat_bills" style="@style/WidgetKey" android:text="🧾" />
+        <TextView android:id="@+id/quick_cat_shopping" style="@style/WidgetKey" android:text="🛒" />
+        <TextView android:id="@+id/quick_cat_entertainment" style="@style/WidgetKey" android:text="🎬" />
+        <TextView android:id="@+id/quick_cat_health" style="@style/WidgetKey" android:text="💊" />
+        <TextView android:id="@+id/quick_cat_education" style="@style/WidgetKey" android:text="🎓" />
+        <TextView android:id="@+id/quick_cat_other" style="@style/WidgetKey" android:text="📦" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetKeyRow">
+        <TextView android:id="@+id/quick_key_1" style="@style/WidgetKey" android:text="1" />
+        <TextView android:id="@+id/quick_key_2" style="@style/WidgetKey" android:text="2" />
+        <TextView android:id="@+id/quick_key_3" style="@style/WidgetKey" android:text="3" />
+        <TextView android:id="@+id/quick_key_4" style="@style/WidgetKey" android:text="4" />
+        <TextView android:id="@+id/quick_key_5" style="@style/WidgetKey" android:text="5" />
+        <TextView android:id="@+id/quick_key_back" style="@style/WidgetKey" android:text="⌫" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetKeyRow">
+        <TextView android:id="@+id/quick_key_6" style="@style/WidgetKey" android:text="6" />
+        <TextView android:id="@+id/quick_key_7" style="@style/WidgetKey" android:text="7" />
+        <TextView android:id="@+id/quick_key_8" style="@style/WidgetKey" android:text="8" />
+        <TextView android:id="@+id/quick_key_9" style="@style/WidgetKey" android:text="9" />
+        <TextView android:id="@+id/quick_key_0" style="@style/WidgetKey" android:text="0" />
+        <TextView android:id="@+id/quick_key_dot" style="@style/WidgetKey" android:text="." />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetKeyRow">
+        <TextView
+            android:id="@+id/quick_add"
+            style="@style/WidgetKey"
+            android:background="@drawable/widget_button"
+            android:text="@string/quick_add_button"
+            android:textColor="@color/widget_on_accent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

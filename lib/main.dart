@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'data/expense_store.dart';
+import 'data/home_widget.dart';
 import 'screens/home_shell.dart';
 import 'theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final store = await ExpenseStore.open();
+  keepHomeWidgetsInSync(store);
   runApp(ExpenseTrackerApp(store: store));
 }
 

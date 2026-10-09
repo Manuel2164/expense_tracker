@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- No periodic updates: the widget redraws itself on every key press, and the
+     app pushes an update when the currency changes. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/quick_add_description"
+    android:initialLayout="@layout/quick_add_widget"
+    android:minWidth="250dp"
+    android:minHeight="180dp"
+    android:previewLayout="@layout/quick_add_widget"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="4"
+    android:targetCellHeight="3"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen" />
