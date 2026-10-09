@@ -7,7 +7,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
 
 /// The GitHub repository whose releases the app updates from, as `owner/name`.
-const updateRepo = 'YOUR_GITHUB_USERNAME/expense_tracker';
+const updateRepo = 'Manuel2164/expense_tracker';
 
 /// A release on GitHub that is newer than the installed app.
 class AppUpdate {
